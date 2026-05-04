@@ -6,10 +6,6 @@ public class PeriodoCosecha {
     private int TiempoCosecha;
 
     public PeriodoCosecha(String nombrePeriodo, double cantidadToneladas, int TiempoCosecha) {
-        this.NombrePeriodo = nombrePeriodo;
-        this.CantidadToneladas = cantidadToneladas;
-        this.TiempoCosecha = TiempoCosecha;
-
         if (TiempoCosecha < 1 || TiempoCosecha > 6) {
             throw new IllegalArgumentException("Tiempo de cosecha debe ser entre 1 y 6");
         }
@@ -17,9 +13,11 @@ public class PeriodoCosecha {
         if (cantidadToneladas < 0.5 || cantidadToneladas > 200) {
             throw new IllegalArgumentException("Cantidad de toneladas fuera de rango");
         }
+
+        this.NombrePeriodo = nombrePeriodo;
+        this.CantidadToneladas = cantidadToneladas;
+        this.TiempoCosecha = TiempoCosecha;
     }
-
-
 
     public String getNombrePeriodo() {
         return NombrePeriodo;
