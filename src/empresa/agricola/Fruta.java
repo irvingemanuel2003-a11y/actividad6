@@ -11,7 +11,8 @@ public class Fruta implements Comparable<Fruta> {
     private double LimiteHectareas;
     private ArrayList<PeriodoCosecha> Periodos;
 
-    public Fruta(String nombreFruta, double hectareas, double costoProduccionTon, ArrayList<PeriodoCosecha> periodos, double precioVentaTon,  double limiteHectareas) {
+    public Fruta(String nombreFruta, double hectareas, double costoProduccionTon, ArrayList<PeriodoCosecha> periodos, double precioVentaTon,
+                 double limiteHectareas) {
         if (limiteHectareas > 10) {
             throw new IllegalArgumentException("El límite de hectáreas no puede ser mayor a 10");
         }
